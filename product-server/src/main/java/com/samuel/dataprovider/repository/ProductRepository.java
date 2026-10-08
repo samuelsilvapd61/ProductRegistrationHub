@@ -31,20 +31,17 @@ public class ProductRepository {
 
     }
 
-    public Optional<ProductEntity> findById(String id) {
+    public ProductEntity findById(String id) {
 
         var productData = database.get(id);
 
-        if (productData == null) {
-            return Optional.empty();
-        }
-
-        return Optional.of(new ProductEntity(
+        return productData == null ? null : new ProductEntity(
                 id,
                 productData.name(),
                 productData.description(),
                 productData.price()
-        ));
+        );
+
     }
 
     public List<ProductEntity> findAll() {

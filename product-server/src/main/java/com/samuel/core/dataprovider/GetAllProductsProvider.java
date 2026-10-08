@@ -5,7 +5,7 @@ import com.samuel.core.domain.Product;
 
 import java.util.List;
 
-public interface GetAllProducts {
+public interface GetAllProductsProvider {
 
     List<Product> getAll();
 

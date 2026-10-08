@@ -3,6 +3,7 @@ package com.samuel.entrypoint.rest;
 
 import com.samuel.core.usecase.AddProductUseCase;
 import com.samuel.core.usecase.GetAllProductsUseCase;
+import com.samuel.core.usecase.GetProductUseCase;
 import com.samuel.entrypoint.rest.mapper.ProductMapper;
 import com.samuel.entrypoint.rest.reponse.ProductResponse;
 import com.samuel.entrypoint.rest.request.ProductRequest;
@@ -24,6 +25,9 @@ public class ProductResource {
     @Autowired
     private GetAllProductsUseCase getAllProductsUseCase;
 
+    @Autowired
+    private GetProductUseCase getProductUseCase;
+
     @PostMapping
     public ResponseEntity<ProductResponse> addProduct(@RequestBody ProductRequest request) {
 
@@ -41,6 +45,13 @@ public class ProductResource {
     @GetMapping
     public ResponseEntity<List<ProductResponse>> getAllProducts() {
         var response = getAllProductsUseCase.getAll().stream().map(ProductMapper::toProductResponse).toList();
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductResponse> getProductById(@PathVariable String id) {
+        var product = getProductUseCase.get(id);
+        var response = toProductResponse(product);
         return ResponseEntity.ok(response);
     }
 

@@ -1,6 +1,6 @@
 package com.samuel.core.usecase.impl;
 
-import com.samuel.core.dataprovider.InsertProduct;
+import com.samuel.core.dataprovider.InsertProductProvider;
 import com.samuel.core.domain.Product;
 import com.samuel.core.usecase.AddProductUseCase;
 
@@ -9,10 +9,10 @@ import java.util.UUID;
 
 public class AddProductUseCaseImpl implements AddProductUseCase {
 
-    private final InsertProduct insertProduct;
+    private final InsertProductProvider insertProductProvider;
 
-    public AddProductUseCaseImpl(InsertProduct insertProduct) {
-        this.insertProduct = insertProduct;
+    public AddProductUseCaseImpl(InsertProductProvider insertProductProvider) {
+        this.insertProductProvider = insertProductProvider;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class AddProductUseCaseImpl implements AddProductUseCase {
         var id = UUID.randomUUID().toString();
         var newProduct = new Product(id, name, description, price);
 
-        return insertProduct.insert(newProduct);
+        return insertProductProvider.insert(newProduct);
 
     }
 

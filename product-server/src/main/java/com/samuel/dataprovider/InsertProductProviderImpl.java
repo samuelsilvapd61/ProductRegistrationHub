@@ -1,6 +1,6 @@
 package com.samuel.dataprovider;
 
-import com.samuel.core.dataprovider.InsertProduct;
+import com.samuel.core.dataprovider.InsertProductProvider;
 import com.samuel.core.domain.Product;
 import com.samuel.dataprovider.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import static com.samuel.dataprovider.repository.mapper.ProductEntityMapper.toPr
 import static com.samuel.dataprovider.repository.mapper.ProductEntityMapper.toProductEntity;
 
 @Component
-public class InsertProductImpl implements InsertProduct {
+public class InsertProductProviderImpl implements InsertProductProvider {
 
     @Autowired
     private ProductRepository productRepository;
@@ -21,8 +21,6 @@ public class InsertProductImpl implements InsertProduct {
         var productEntity = toProductEntity(product);
         var productEntityAdded = productRepository.insert(productEntity);
         return toProduct(productEntityAdded);
-
-
 
     }
 
