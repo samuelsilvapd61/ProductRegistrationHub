@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AddProductUseCaseConfig {
+public class AddProductConfig {
 
     @Bean
     public AddProductUseCaseImpl addProductUseCaseImpl(SendProductProviderImpl sendProductProviderImpl) {

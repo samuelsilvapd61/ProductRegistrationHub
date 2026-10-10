@@ -2,7 +2,7 @@ package com.samuel.dataprovider;
 
 import com.samuel.core.dataprovider.SendProductProvider;
 import com.samuel.core.domain.Product;
-import com.samuel.dataprovider.client.SendProductRestClient;
+import com.samuel.dataprovider.client.ProductServerRestClient;
 import com.samuel.dataprovider.client.request.SendProductRestRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,7 +15,7 @@ import static com.samuel.dataprovider.client.mapper.ProductRestClientMapper.toPr
 public class SendProductProviderImpl implements SendProductProvider {
 
     @Autowired
-    private SendProductRestClient sendProductRestClient;
+    private ProductServerRestClient productServerRestClient;
 
     @Override
     public Product send(String name, String description, BigDecimal price) {
@@ -26,7 +26,7 @@ public class SendProductProviderImpl implements SendProductProvider {
                 .price(price)
                 .build();
 
-        var response = sendProductRestClient.send(productRequest);
+        var response = productServerRestClient.send(productRequest);
 
         return toProduct(response);
     }
