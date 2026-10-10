@@ -60,6 +60,12 @@
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-restclient</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-grpc-client</artifactId>
                 <version>${springboot.version}</version>
             </dependency>

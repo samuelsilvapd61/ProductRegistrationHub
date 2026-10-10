@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+clients:
+  product-server:
+    rest:
+      base-url: http://localhost:8080
