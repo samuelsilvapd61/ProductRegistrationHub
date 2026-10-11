@@ -21,7 +21,6 @@ public class SendProductProviderGrpcImpl implements SendProductProvider {
 
     @Override
     public Product send(String name, String description, BigDecimal price) {
-
         log.info("Sending product request using gRPC");
 
         var request = CreateProductRequest.newBuilder()

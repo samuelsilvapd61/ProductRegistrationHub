@@ -12,7 +12,7 @@ public class RestRequestResource extends BaseResource {
 
     public RestRequestResource(
             @Qualifier("addProductUseCaseImplRest") AddProductUseCase addProductUseCase,
-            GetAllProductsUseCase getAllProductsUseCase) {
+            @Qualifier("getAllProductsUseCaseImplRest") GetAllProductsUseCase getAllProductsUseCase) {
         this.addProductUseCase = addProductUseCase;
         this.getAllProductsUseCase = getAllProductsUseCase;
     }

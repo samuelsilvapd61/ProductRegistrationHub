@@ -10,13 +10,13 @@ import org.springframework.context.annotation.Configuration;
 public class AddProductConfig {
 
     @Bean
-    public AddProductUseCaseImpl addProductUseCaseImplRest(SendProductProviderImpl sendProductProviderImpl) {
-        return new AddProductUseCaseImpl(sendProductProviderImpl);
+    public AddProductUseCaseImpl addProductUseCaseImplRest(SendProductProviderImpl provider) {
+        return new AddProductUseCaseImpl(provider);
     }
 
     @Bean
-    public AddProductUseCaseImpl addProductUseCaseImplGrpc(SendProductProviderGrpcImpl sendProductProviderGrpcImpl) {
-        return new AddProductUseCaseImpl(sendProductProviderGrpcImpl);
+    public AddProductUseCaseImpl addProductUseCaseImplGrpc(SendProductProviderGrpcImpl provider) {
+        return new AddProductUseCaseImpl(provider);
     }
 
 }

@@ -1,6 +1,8 @@
 package com.samuel.dataprovider.grpc.client;
 
+import com.google.protobuf.Empty;
 import com.samuel.productregistrationhub.proto.CreateProductRequest;
+import com.samuel.productregistrationhub.proto.GetProductsResponse;
 import com.samuel.productregistrationhub.proto.ProductResponse;
 import com.samuel.productregistrationhub.proto.ProductServiceGrpc.ProductServiceBlockingStub;
 import org.springframework.grpc.client.ImportGrpcClients;
@@ -18,6 +20,10 @@ public class ProductServerGrpcClient {
 
     public ProductResponse send(CreateProductRequest request) {
         return stub.createProduct(request);
+    }
+
+    public GetProductsResponse getAll() {
+        return stub.getProducts(Empty.newBuilder().build());
     }
 
 }
