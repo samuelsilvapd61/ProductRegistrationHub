@@ -26,4 +26,13 @@ public class ProductServerGrpcClient {
         return stub.getProducts(Empty.newBuilder().build());
     }
 
+    public GetProductsResponse getAllStream() {
+        var products = stub.streamGetProducts(Empty.getDefaultInstance());
+        var response = GetProductsResponse.newBuilder();
+
+        products.forEachRemaining(response::addProducts);
+
+        return response.build();
+    }
+
 }
