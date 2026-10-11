@@ -20,21 +20,15 @@ A Clean Architecture ajuda a manter as regras de negócio independentes de frame
 
 ## Vídeo no YouTube
 
-Nesta seção, será adicionado um vídeo explicando o projeto, sua arquitetura e as tecnologias utilizadas.
-
 📺 **Playlist YouTube:**
 
 Assita os vídeos para entender sobre os assuntos técnicos e o projeto implementado.
-
-
 
 > [Assistir no YouTube](https://youtube.com/playlist?list=PLWNCLdZ4Y0_M&si=CNZODZUe5sA989S-)
 
 ---
 
 ## Slides da apresentação
-
-Nesta seção, serão disponibilizados os slides sobre o projeto e sua arquitetura.
 
 📊 **Apresentação:**
 
