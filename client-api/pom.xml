@@ -51,6 +51,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.samuel</groupId>
+            <artifactId>proto</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

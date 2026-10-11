@@ -5,6 +5,7 @@ import com.samuel.core.usecase.GetAllProductsUseCase;
 import com.samuel.entrypoint.rest.mapper.ProductMapper;
 import com.samuel.entrypoint.rest.response.ProductResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,7 @@ import static com.samuel.entrypoint.rest.mapper.ProductMapper.productToProductRe
 public class RestRequestResource {
 
     @Autowired
+    @Qualifier("addProductUseCaseImplRest")
     private AddProductUseCase addProductUseCase;
 
     @Autowired

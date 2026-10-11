@@ -1,7 +1,7 @@
-package com.samuel.dataprovider.client;
+package com.samuel.dataprovider.rest.client;
 
-import com.samuel.dataprovider.client.request.SendProductRestRequest;
-import com.samuel.dataprovider.client.response.ProductRestResponse;
+import com.samuel.dataprovider.rest.request.SendProductRestRequest;
+import com.samuel.dataprovider.rest.response.ProductRestResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;

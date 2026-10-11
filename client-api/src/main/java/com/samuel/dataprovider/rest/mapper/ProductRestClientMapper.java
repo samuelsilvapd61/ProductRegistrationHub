@@ -1,7 +1,7 @@
-package com.samuel.dataprovider.client.mapper;
+package com.samuel.dataprovider.rest.mapper;
 
 import com.samuel.core.domain.Product;
-import com.samuel.dataprovider.client.response.ProductRestResponse;
+import com.samuel.dataprovider.rest.response.ProductRestResponse;
 
 public class ProductRestClientMapper {
 

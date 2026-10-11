@@ -1,9 +1,9 @@
-package com.samuel.dataprovider;
+package com.samuel.dataprovider.rest;
 
 import com.samuel.core.dataprovider.GetAllProductsProvider;
 import com.samuel.core.domain.Product;
-import com.samuel.dataprovider.client.ProductServerRestClient;
-import com.samuel.dataprovider.client.mapper.ProductRestClientMapper;
+import com.samuel.dataprovider.rest.client.ProductServerRestClient;
+import com.samuel.dataprovider.rest.mapper.ProductRestClientMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

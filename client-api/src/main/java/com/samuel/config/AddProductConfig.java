@@ -1,7 +1,8 @@
 package com.samuel.config;
 
 import com.samuel.core.usecase.impl.AddProductUseCaseImpl;
-import com.samuel.dataprovider.SendProductProviderImpl;
+import com.samuel.dataprovider.grpc.SendProductProviderGrpcImpl;
+import com.samuel.dataprovider.rest.SendProductProviderImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,8 +10,13 @@ import org.springframework.context.annotation.Configuration;
 public class AddProductConfig {
 
     @Bean
-    public AddProductUseCaseImpl addProductUseCaseImpl(SendProductProviderImpl sendProductProviderImpl) {
+    public AddProductUseCaseImpl addProductUseCaseImplRest(SendProductProviderImpl sendProductProviderImpl) {
         return new AddProductUseCaseImpl(sendProductProviderImpl);
+    }
+
+    @Bean
+    public AddProductUseCaseImpl addProductUseCaseImplGrpc(SendProductProviderGrpcImpl sendProductProviderGrpcImpl) {
+        return new AddProductUseCaseImpl(sendProductProviderGrpcImpl);
     }
 
 }

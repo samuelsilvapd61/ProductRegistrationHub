@@ -1,7 +1,7 @@
 package com.samuel.config;
 
 import com.samuel.core.usecase.impl.GetAllProductsUseCaseImpl;
-import com.samuel.dataprovider.GetAllProductsProviderImpl;
+import com.samuel.dataprovider.rest.GetAllProductsProviderImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

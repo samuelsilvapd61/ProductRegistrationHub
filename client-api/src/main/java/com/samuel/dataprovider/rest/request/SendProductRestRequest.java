@@ -1,4 +1,4 @@
-package com.samuel.dataprovider.client.response;
+package com.samuel.dataprovider.rest.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,8 @@ import java.math.BigDecimal;
 @Data
 @Builder
 @AllArgsConstructor
-public class ProductRestResponse {
+public class SendProductRestRequest {
 
-    private String id;
     private String name;
     private String description;
     private BigDecimal price;
